@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    padding: 30px;
+}
+
+.invoice {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Store Header */
+
+.store-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.store-header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.store-header p {
+    color: #555;
+    margin: 4px 0;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+/* Invoice Information */
+
+.invoice-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.invoice-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.invoice-info label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #333;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: black;
+    color: white;
+}
+
+td input {
+    width: 100%;
+}
+
+/* Buttons */
+
+button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#addProductBtn {
+    background: black;
+    color: white;
+    margin-bottom: 25px;
+}
+
+#addProductBtn:hover {
+    background: #555;
+}
+
+.deleteBtn {
+    background: #dc3545;
+    color: white;
+}
+
+.deleteBtn:hover {
+    background: #b02a37;
+}
+
+/* Summary */
+
+.summary {
+    width: 350px;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.summary div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.summary input {
+    width: 120px;
+}
+
+.grand-total {
+    font-size: 20px;
+    font-weight: bold;
+    border-top: 2px solid #333;
+    margin-top: 5px;
+}
+
+/* Payment */
+
+.payment {
+    margin-top: 25px;
+}
+
+.payment label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Action Buttons */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+#calculateBtn {
+    background: #198754;
+    color: white;
+}
+
+#calculateBtn:hover {
+    background: #146c43;
+}
+
+#printBtn {
+    background: #0d6efd;
+    color: white;
+}
+
+#printBtn:hover {
+    background: #0a58ca;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .invoice {
+        padding: 15px;
+    }
+
+    .invoice-info {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+    .summary {
+        width: 100%;
+    }
+}
+
+/* Print */
+
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .invoice {
+        box-shadow: none;
+        width: 100%;
+        max-width: none;
+    }
+
+    #addProductBtn,
+    #calculateBtn,
+    #printBtn,
+    .deleteBtn {
+        display: none;
+    }
+
+    input,
+    select {
+        border: none;
+    }
+}

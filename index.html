@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Departmental Store Invoice</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="invoice">
+
+        <!-- Store Header -->
+        <header class="store-header">
+            <h1>Al-Fatah DEPARTMENTAL STORE</h1>
+            <p>Main Market, Mianwali</p>
+            <p>Phone: 0333-6557133</p>
+        </header>
+
+        <hr>
+
+        <!-- Invoice Information -->
+        <section class="invoice-info">
+
+            <div>
+                <label>Invoice No:</label>
+                <input type="text" id="invoiceNo" value="INV-001">
+            </div>
+
+            <div>
+                <label>Date:</label>
+                <input type="date" id="invoiceDate">
+            </div>
+
+            <div>
+                <label>Customer Name:</label>
+                <input type="text" id="customerName" placeholder="Enter customer name">
+            </div>
+
+        </section>
+
+        <!-- Products Table -->
+        <table id="invoiceTable">
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="productBody">
+
+                <tr>
+                    <td>1</td>
+
+                    <td>
+                        <input type="text" placeholder="Product name">
+                    </td>
+
+                    <td>
+                        <input type="number" class="quantity" value="1" min="1">
+                    </td>
+
+                    <td>
+                        <input type="number" class="price" value="0" min="0">
+                    </td>
+
+                    <td class="itemTotal">0</td>
+
+                    <td>
+                        <button class="deleteBtn">Delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <!-- Add Product Button -->
+        <button id="addProductBtn">
+            + Add Product
+        </button>
+
+        <!-- Bill Summary -->
+        <section class="summary">
+
+            <div>
+                <span>Subtotal:</span>
+                <strong id="subtotal">Rs. 0</strong>
+            </div>
+
+            <div>
+                <span>Discount:</span>
+                <input type="number" id="discount" value="0" min="0">
+            </div>
+
+            <div>
+                <span>Tax:</span>
+                <input type="number" id="tax" value="0" min="0">
+            </div>
+
+            <div class="grand-total">
+                <span>Grand Total:</span>
+                <strong id="grandTotal">Rs. 0</strong>
+            </div>
+
+        </section>
+
+        <!-- Payment -->
+        <section class="payment">
+
+            <label>Payment Method:</label>
+
+            <select id="paymentMethod">
+                <option value="Cash">Cash</option>
+                <option value="Card">Card</option>
+                <option value="Online">Online</option>
+            </select>
+
+        </section>
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button id="calculateBtn">
+                Calculate
+            </button>
+
+            <button id="printBtn">
+                Print Invoice
+            </button>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Thank you for shopping with us!</p>
+            <p>Please visit again.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
